@@ -1,0 +1,10 @@
+// Place your key bindings in this file to override the defaults.
+// Space stays the nvim leader (all LazyVim binds work); Shift+Space opens the
+// which-key menu as a reference/launcher.
+[
+	{
+		"key": "shift+space",
+		"command": "whichkey.show",
+		"when": "editorTextFocus && neovim.init && neovim.mode == normal && !whichkeyVisible"
+	}
+]

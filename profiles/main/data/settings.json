@@ -22,7 +22,7 @@
 	"editor.formatOnType": true,
 	"prettier.tabWidth": 2,
 	"php.suggest.basic": false,
-	"workbench.iconTheme": "symbols",
+	"workbench.iconTheme": "catppuccin-mocha",
 	"files.exclude": {
 		"**/__pycache__": true,
 		"**/.git": false
@@ -30,7 +30,7 @@
 	"editor.insertSpaces": true,
 	"editor.tabSize": 2,
 	"editor.fontFamily": "'Geist Mono', 'GeistMono Nerd Font'",
-	"editor.fontSize": 14.5,
+	"editor.fontSize": 13.5,
 	"editor.fontWeight": "600",
 	"editor.fontLigatures": "'ss11', 'ss05'",
 	"editor.quickSuggestions": {
@@ -44,7 +44,7 @@
 	},
 	"html.format.wrapLineLength": 100,
 	"html.format.wrapAttributes": "auto",
-	"terminal.integrated.fontSize": 13,
+	"terminal.integrated.fontSize": 14.5,
 	"terminal.integrated.fontWeight": "bold",
 	"terminal.integrated.fontFamily": "'Geist Mono', 'GeistMono Nerd Font'",
 	"[dart]": {
@@ -99,12 +99,493 @@
 	"emmet.includeLanguages": {
 		"django-html": "html"
 	},
-	"vim.leader": "<space>",
-	"vim.easymotion": true,
-	"vim.incsearch": true,
-	"vim.useSystemClipboard": true,
-	"vim.useCtrlKeys": true,
-	"vim.hlsearch": true,
+	"whichkey.bindings": [
+		{
+			"key": " ",
+			"name": "Find Files",
+			"type": "command",
+			"command": "workbench.action.quickOpen"
+		},
+		{
+			"key": "/",
+			"name": "Grep (Root Dir)",
+			"type": "command",
+			"command": "workbench.action.findInFiles"
+		},
+		{
+			"key": ",",
+			"name": "Buffers",
+			"type": "command",
+			"command": "workbench.action.showAllEditors"
+		},
+		{
+			"key": ":",
+			"name": "Command History",
+			"type": "command",
+			"command": "workbench.action.showCommands"
+		},
+		{
+			"key": "e",
+			"name": "Explorer (Root Dir)",
+			"type": "command",
+			"command": "workbench.view.explorer"
+		},
+		{
+			"key": "E",
+			"name": "Explorer (cwd)",
+			"type": "command",
+			"command": "workbench.view.explorer"
+		},
+		{
+			"key": "f",
+			"name": "+Find",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "f",
+					"name": "Find Files",
+					"type": "command",
+					"command": "workbench.action.quickOpen"
+				},
+				{
+					"key": "F",
+					"name": "Find Files (cwd)",
+					"type": "command",
+					"command": "workbench.action.quickOpen"
+				},
+				{
+					"key": "g",
+					"name": "Find Files (git-files)",
+					"type": "command",
+					"command": "workbench.action.quickOpen"
+				},
+				{
+					"key": "r",
+					"name": "Recent",
+					"type": "command",
+					"command": "workbench.action.openRecent"
+				},
+				{
+					"key": "R",
+					"name": "Recent (cwd)",
+					"type": "command",
+					"command": "workbench.action.openRecent"
+				},
+				{
+					"key": "b",
+					"name": "Buffers",
+					"type": "command",
+					"command": "workbench.action.showAllEditors"
+				},
+				{
+					"key": "B",
+					"name": "Buffers (all)",
+					"type": "command",
+					"command": "workbench.action.showAllEditors"
+				},
+				{
+					"key": "c",
+					"name": "Find Config File",
+					"type": "command",
+					"command": "workbench.action.openSettingsJson"
+				},
+				{
+					"key": "p",
+					"name": "Projects",
+					"type": "command",
+					"command": "workbench.action.openRecent"
+				},
+				{
+					"key": "n",
+					"name": "New File",
+					"type": "command",
+					"command": "workbench.action.files.newUntitledFile"
+				},
+				{
+					"key": "t",
+					"name": "Terminal (Root Dir)",
+					"type": "command",
+					"command": "workbench.action.terminal.toggleTerminal"
+				},
+				{
+					"key": "T",
+					"name": "Terminal (cwd)",
+					"type": "command",
+					"command": "workbench.action.terminal.toggleTerminal"
+				},
+				{
+					"key": "e",
+					"name": "Explorer (Root Dir)",
+					"type": "command",
+					"command": "workbench.view.explorer"
+				},
+				{
+					"key": "E",
+					"name": "Explorer (cwd)",
+					"type": "command",
+					"command": "workbench.view.explorer"
+				}
+			]
+		},
+		{
+			"key": "s",
+			"name": "+Search",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "g",
+					"name": "Grep (Root Dir)",
+					"type": "command",
+					"command": "workbench.action.findInFiles"
+				},
+				{
+					"key": "G",
+					"name": "Grep (cwd)",
+					"type": "command",
+					"command": "workbench.action.findInFiles"
+				},
+				{
+					"key": "b",
+					"name": "Buffer Lines",
+					"type": "command",
+					"command": "actions.find"
+				},
+				{
+					"key": "B",
+					"name": "Grep Open Buffers",
+					"type": "command",
+					"command": "workbench.action.findInFiles"
+				},
+				{
+					"key": "c",
+					"name": "Command History",
+					"type": "command",
+					"command": "workbench.action.showCommands"
+				},
+				{
+					"key": "C",
+					"name": "Commands",
+					"type": "command",
+					"command": "workbench.action.showCommands"
+				},
+				{
+					"key": "s",
+					"name": "LSP Symbols",
+					"type": "command",
+					"command": "workbench.action.gotoSymbol"
+				},
+				{
+					"key": "S",
+					"name": "LSP Workspace Symbols",
+					"type": "command",
+					"command": "workbench.action.showAllSymbols"
+				},
+				{
+					"key": "d",
+					"name": "Diagnostics",
+					"type": "command",
+					"command": "workbench.actions.view.problems"
+				},
+				{
+					"key": "D",
+					"name": "Buffer Diagnostics",
+					"type": "command",
+					"command": "workbench.actions.view.problems"
+				},
+				{
+					"key": "l",
+					"name": "Location List",
+					"type": "command",
+					"command": "workbench.actions.view.problems"
+				},
+				{
+					"key": "q",
+					"name": "Quickfix List",
+					"type": "command",
+					"command": "workbench.actions.view.problems"
+				},
+				{
+					"key": "h",
+					"name": "Help Pages",
+					"type": "command",
+					"command": "workbench.action.openDocumentationUrl"
+				},
+				{
+					"key": "k",
+					"name": "Keymaps",
+					"type": "command",
+					"command": "workbench.action.openGlobalKeybindings"
+				},
+				{
+					"key": "p",
+					"name": "Plugin Specs",
+					"type": "command",
+					"command": "workbench.view.extensions"
+				}
+			]
+		},
+		{
+			"key": "b",
+			"name": "+Buffers",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "b",
+					"name": "Switch to Other Buffer",
+					"type": "command",
+					"command": "workbench.action.openPreviousRecentlyUsedEditorInGroup"
+				},
+				{
+					"key": "d",
+					"name": "Delete Buffer",
+					"type": "command",
+					"command": "workbench.action.closeActiveEditor"
+				},
+				{
+					"key": "o",
+					"name": "Delete Other Buffers",
+					"type": "command",
+					"command": "workbench.action.closeOtherEditors"
+				},
+				{
+					"key": "D",
+					"name": "Delete Buffer and Window",
+					"type": "command",
+					"command": "workbench.action.closeEditorsAndGroup"
+				}
+			]
+		},
+		{
+			"key": "c",
+			"name": "+Code",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "a",
+					"name": "Code Action",
+					"type": "command",
+					"command": "editor.action.quickFix"
+				},
+				{
+					"key": "d",
+					"name": "Line Diagnostics",
+					"type": "command",
+					"command": "editor.action.showHover"
+				},
+				{
+					"key": "f",
+					"name": "Format",
+					"type": "command",
+					"command": "editor.action.formatDocument"
+				},
+				{
+					"key": "r",
+					"name": "Rename",
+					"type": "command",
+					"command": "editor.action.rename"
+				}
+			]
+		},
+		{
+			"key": "g",
+			"name": "+Git",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "s",
+					"name": "Git Status",
+					"type": "command",
+					"command": "workbench.view.scm"
+				},
+				{
+					"key": "d",
+					"name": "Git Diff (hunks)",
+					"type": "command",
+					"command": "workbench.view.scm"
+				},
+				{
+					"key": "D",
+					"name": "Git Diff (origin)",
+					"type": "command",
+					"command": "workbench.view.scm"
+				}
+			]
+		},
+		{
+			"key": "u",
+			"name": "+Toggles",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "w",
+					"name": "Word Wrap",
+					"type": "command",
+					"command": "editor.action.toggleWordWrap"
+				},
+				{
+					"key": "b",
+					"name": "Dark/Light Background",
+					"type": "command",
+					"command": "workbench.action.toggleLightDarkThemes"
+				},
+				{
+					"key": "C",
+					"name": "Colorscheme",
+					"type": "command",
+					"command": "workbench.action.selectTheme"
+				}
+			]
+		},
+		{
+			"key": "w",
+			"name": "+Windows",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "w",
+					"name": "Next Window",
+					"type": "command",
+					"command": "workbench.action.focusNextGroup"
+				},
+				{
+					"key": "m",
+					"name": "Zoom",
+					"type": "command",
+					"command": "workbench.action.toggleMaximizeEditorGroup"
+				},
+				{
+					"key": "d",
+					"name": "Delete Window",
+					"type": "command",
+					"command": "workbench.action.closeEditorsInGroup"
+				},
+				{
+					"key": "-",
+					"name": "Split Window Below",
+					"type": "command",
+					"command": "workbench.action.splitEditorDown"
+				},
+				{
+					"key": "|",
+					"name": "Split Window Right",
+					"type": "command",
+					"command": "workbench.action.splitEditorRight"
+				}
+			]
+		},
+		{
+			"key": "\t",
+			"name": "+Tabs",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "l",
+					"name": "Last Tab",
+					"type": "command",
+					"command": "workbench.action.lastEditorInGroup"
+				},
+				{
+					"key": "f",
+					"name": "First Tab",
+					"type": "command",
+					"command": "workbench.action.firstEditorInGroup"
+				},
+				{
+					"key": "]",
+					"name": "Next Tab",
+					"type": "command",
+					"command": "workbench.action.nextEditorInGroup"
+				},
+				{
+					"key": "[",
+					"name": "Previous Tab",
+					"type": "command",
+					"command": "workbench.action.previousEditorInGroup"
+				},
+				{
+					"key": "t",
+					"name": "New Tab",
+					"type": "command",
+					"command": "workbench.action.files.newUntitledFile"
+				},
+				{
+					"key": "d",
+					"name": "Close Tab",
+					"type": "command",
+					"command": "workbench.action.closeActiveEditor"
+				},
+				{
+					"key": "o",
+					"name": "Close Other Tabs",
+					"type": "command",
+					"command": "workbench.action.closeOtherEditors"
+				}
+			]
+		},
+		{
+			"key": "q",
+			"name": "+Quit",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "q",
+					"name": "Quit All",
+					"type": "command",
+					"command": "workbench.action.quit"
+				}
+			]
+		},
+		{
+			"key": "]",
+			"name": "+Next",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "d",
+					"name": "Next Diagnostic",
+					"type": "command",
+					"command": "editor.action.marker.next"
+				},
+				{
+					"key": "q",
+					"name": "Next Problem in Files",
+					"type": "command",
+					"command": "editor.action.marker.nextInFiles"
+				}
+			]
+		},
+		{
+			"key": "[",
+			"name": "+Prev",
+			"type": "bindings",
+			"bindings": [
+				{
+					"key": "d",
+					"name": "Prev Diagnostic",
+					"type": "command",
+					"command": "editor.action.marker.prev"
+				},
+				{
+					"key": "q",
+					"name": "Prev Problem in Files",
+					"type": "command",
+					"command": "editor.action.marker.prevInFiles"
+				}
+			]
+		},
+		{
+			"key": "?",
+			"name": "Search Keybindings",
+			"type": "command",
+			"command": "whichkey.searchBindings"
+		},
+		{
+			"key": ".",
+			"name": "Repeat Most Recent Action",
+			"type": "command",
+			"command": "whichkey.repeatMostRecent"
+		}
+	],
 	"files.associations": {
 		"*.rmd": "markdown",
 		"**/*.html": "html",
@@ -120,11 +601,6 @@
 		"*.ipynb": "jupyter-notebook"
 	},
 	"editor.inlineSuggest.enabled": true,
-	"terminal.integrated.defaultProfile.windows": "Nushell",
-	"markdownlint.config": {
-		"no-inline-html": false,
-		"$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint/v0.40.0/schema/markdownlint-config-schema.json"
-	},
 	"security.workspace.trust.untrustedFiles": "open",
 	"[aspnetcorerazor]": {
 		"editor.defaultFormatter": "ms-dotnettools.csharp"
@@ -346,5 +822,17 @@
 	},
 	"rust-analyzer.inlayHints.typeHints.enable": false,
 	"rust-analyzer.inlayHints.chainingHints.enable": false,
-	"git.addAICoAuthor": "off"
+	"git.addAICoAuthor": "off",
+	"intellij.region": "americas",
+	"intellij.dataSharing": "none",
+	"yaml.schemas": {
+		"file:///home/alisson/.vscode-oss/extensions/continue.continue-2.0.0-linux-x64/config-yaml-schema.json": [
+			".continue/**/*.yaml"
+		]
+	},
+	"continue.enableNextEdit": false,
+	"extensions.experimental.affinity": {
+		"asvetliakov.vscode-neovim": 1
+	},
+	"window.zoomLevel": 0.3
 }

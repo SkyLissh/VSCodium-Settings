@@ -1,4 +1,8 @@
-disabled: []
+disabled:
+  - id: asvetliakov.vscode-neovim
+    uuid: caf8995c-5426-4bf7-9d01-f7968ebd49bb
+  - id: vscodevim.vim
+    uuid: d96e79c6-8b25-4be3-8545-0e0ecefcae03
 enabled:
   - id: adpyke.codesnap
     uuid: 8c1fc960-44b1-45e8-89b5-85f982fdaf27
@@ -20,6 +24,8 @@ enabled:
     uuid: a41c1549-4053-44d4-bf30-60fc809b4a86
   - id: codezombiech.gitignore
     uuid: 3e891cf9-53cb-49a3-8d01-8f0b1f0afb29
+  - id: Continue.continue
+    uuid: c8d442ab-9ee3-4891-a5b0-994f14f54c94
   - id: Dart-Code.dart-code
     uuid: f57f68ea-9ee8-42b5-9a97-041d3e4278c4
   - id: Dart-Code.flutter
@@ -96,11 +102,13 @@ enabled:
     uuid: 9d8c32ab-354c-4daf-a9bf-20b633734435
   - id: vitest.explorer
     uuid: ab3534a7-eaae-4f75-9735-62bfd758b220
-  - id: vscodevim.vim
-    uuid: d96e79c6-8b25-4be3-8545-0e0ecefcae03
+  - id: VSpaceCode.whichkey
+    uuid: 47ddeb9c-b4bb-4594-906b-412886e20e47
   - id: Vue.volar
     uuid: a95ee795-1576-4ffa-acda-8d6e6a95c584
   - id: YoavBls.pretty-ts-errors
     uuid: 1e149c89-8f97-447e-863d-1146f0ad1b70
+  - id: yusifaliyevpro.vscicons
+    uuid: af09676f-ca6f-4f37-b738-d2610863977a
   - id: zokugun.cron-tasks
     uuid: b7bbbbd5-7a39-4312-87aa-ef6a41de67fb
